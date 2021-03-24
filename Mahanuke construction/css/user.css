@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(51, 51, 124);
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    background-color: rgb(159, 171, 224);
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img {
+    width: 40%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.im_g {
+    margin-left: 20%;
+    margin-top: 1px;
+    width: 100%;
+    height: auto;
+}
+
+
+/*------user form----*/
+
+form {
+    margin-top: 1px;
+    margin-right: auto;
+    margin-left: 5%;
+    height: auto;
+}
+
+label {
+    margin-top: 5px;
+}
+
+input {
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+/*------user form----*/
+
+@media only screen and (max-width: 428px) {
+    body {
+        background-color: rgb(51, 51, 124);
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+    }
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        height: 600px;
+        background-color: rgb(159, 171, 224);
+        margin-top: 20px;
+        width: 70%;
+    }
+    .img {
+        width: 50%;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .im_g {
+        margin-left: 20%;
+        margin-top: 5px;
+    }
+    /*------user form----*/
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        height: auto;
+    }
+    label {
+        margin-top: 5px;
+    }
+    input {
+        width: 95%;
+        height: 50px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    /*------user form----*/
+}

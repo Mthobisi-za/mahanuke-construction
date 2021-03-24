@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/html/user upload.html">
+    <link rel="stylesheet" href="/css/user.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahanuke Construction</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img class="im_g" src="/media/img/Logo.png" alt="">
+        </div>
+        <div class="info">
+            <form action="">
+                <label for="user">Username</label> <br>
+                <input type="text" placeholder="Jack" name="" id="user">
+                <br>
+                <br>
+                <label for="username">Password</label><br>
+                <input type="text" placeholder="*******" name="" id="pass">
+                <br>
+                <br>
+                <button id="btn"><a>Submit</a></button>
+            </form>
+        </div>
+    </div>
+
+    <body>
+        <script>
+            var btn = document.querySelector("#btn");
+            btn.addEventListener("click", (e) => {
+                e.preventDefault()
+                var username = document.querySelector("#user").value;
+                var password = document.querySelector("#pass").value;
+
+                fetch('https://sheetdb.io/api/v1/slenvumx7l7b5')
+                    .then(response => response.json())
+                    .then(data => {
+                        for (let i of data) {
+                            if (i.username == username || i.password == pass) {
+                                window.open("/html/user upload.html")
+
+
+                            } else {
+                                return console.log("plz try again")
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    })
+            })
+        </script>
+    </body>

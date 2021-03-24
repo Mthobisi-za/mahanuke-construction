@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div class="first_menu">
+        <img class="img_logo" src="/media/img/Logo.png" alt="" srcset="">
+    </div>
+    <ul class="a_holder">
+        <li class="li">
+            <a href="/html/user.html" class="a_1">User login</a>
+        </li>
+        <li class="li"><a class="a_1" href="/html/hire.html">hire us</a> </li>
+        <li class="li"><a class="a_1" href="/html/gallery.html">gallery</a> </li>
+        <li class="li"><a class="a_1" href="/index.html">home</a> </li>
+    </ul>
+    <!--menu-->
+    <div class="mother">
+
+        <!--
+        <div class="holder">
+            <h2 class="h2">hey</h2>
+            <p class="info">playing</p>
+            <img class="img" src="/media/img/Shade.jpeg" alt="">
+
+        </div>--->
+    </div>
+    <!---footer---->
+    <footer class="ft">
+        <div class="ft_holder">
+
+        </div>
+        <div class="copy">
+
+        </div>
+    </footer>
+    <!---footer---->
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAuewESdtIolIUh1z0rsKOaLnEypun5dko",
+            authDomain: "mahanuke-construction-base.firebaseapp.com",
+            projectId: "mahanuke-construction-base",
+            storageBucket: "mahanuke-construction-base.appspot.com",
+            messagingSenderId: "778542588163",
+            appId: "1:778542588163:web:18b428993cc83f131ec936",
+            measurementId: "G-LZGSFFWHKF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+
+
+
+
+
+    <!-----api-->
+
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                sms: "0677738450", // Sms phone number
+                whatsapp: "0832830198", // WhatsApp number
+                call_to_action: "Contact us", // Call to action
+                button_color: "#FF6550", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "sms,whatsapp", // Order of buttons
+            };
+            var proto = document.location.protocol,
+                host = "getbutton.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
+
+    <script src="/script/load.js"></script>
+</body>
+
+</html>

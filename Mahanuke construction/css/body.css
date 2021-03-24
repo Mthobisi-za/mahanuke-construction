@@ -1,0 +1,47 @@
+       .about_us_container {
+           width: 90%;
+           margin-left: auto;
+           margin-right: auto;
+           font-family: sans-serif;
+       }
+       
+       .hj1 {
+           text-align: center;
+       }
+       
+       .P_first {
+           text-align: center;
+       }
+       
+       .ul_s {}
+       /* about me section*/
+       
+       .about_me_section {
+           width: 90%;
+           margin-left: auto;
+           margin-right: auto;
+           font-family: sans-serif;
+       }
+       
+       .flex {
+           display: flex;
+       }
+       
+       .profile {
+           width: 40%;
+       }
+       
+       .img_abt_profile {
+           width: 100%;
+           border-radius: 30%;
+       }
+       
+       .info_about_me {
+           width: 50%;
+       }
+       
+       .p_about_me {
+           text-align: center;
+       }
+       /* about me section*/
+       /*-----mediascreens-----*/

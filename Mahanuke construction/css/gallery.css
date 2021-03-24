@@ -1,0 +1,47 @@
+.mother {
+    width: 100%;
+    height: auto;
+}
+
+.holder {
+    background-color: rgb(100, 128, 180);
+    width: 80%;
+    display: block;
+    height: auto;
+    margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    font-size: 17px;
+    margin-left: 5%;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.h2 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 428px) {
+    .holder {
+        display: block;
+        margin-left: 5%;
+        width: 100%;
+    }
+    .img {
+        width: 80%;
+        height: auto;
+    }
+    .info {
+        font-size: 17px;
+    }
+}

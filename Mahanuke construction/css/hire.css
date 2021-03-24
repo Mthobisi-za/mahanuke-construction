@@ -1,0 +1,55 @@
+.bgmaker {
+    margin-top: 0;
+    height: 400px;
+    background: linear-gradient(350deg, #0f4675, cyan);
+}
+
+.main {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(gray, white);
+}
+
+.div {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 350px;
+    height: 355px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(250deg, rgb(175, 175, 175), rgb(113, 99, 136), rgba(129, 112, 112, 0.486));
+}
+
+@media only screen and (max-width: 428px) {
+    .bgmaker {
+        margin-top: 0;
+        height: 400px;
+        background: linear-gradient(350deg, #0f4675, cyan);
+    }
+    .main {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(gray, white);
+    }
+    .div {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        width: 350px;
+        height: 355px;
+        margin-left: auto;
+        margin-right: auto;
+        background: linear-gradient(250deg, rgb(175, 175, 175), rgb(113, 99, 136), rgba(129, 112, 112, 0.486));
+    }
+}

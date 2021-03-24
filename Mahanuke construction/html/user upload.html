@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+
+    <link rel="stylesheet" href="/css/upload.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahanuke Construction</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="re">
+            <h2>upload the pictures</h2>
+            <label for="text">Tittle</label> <br>
+            <input type="text" id="text"> <br> <br>
+            <label for="text_area">Discription of image</label> <br>
+            <textarea name="" id="text_area" cols="30" rows="10"></textarea>
+            <br> <br>
+            <label for="pic">Add picture</label> <br>
+            <input type="file" id="pic" multiple> <br><br>
+            <button onclick="savedata()">Submit</button>
+        </div>
+        <div class="result" id="result">
+
+        </div>
+    </div>
+
+    <script>
+        var done;
+        var pic = document.querySelector("#pic");
+        pic.addEventListener("change", () => {
+            var url = pic.files;
+            if (url.length == 1) {
+                console.log("i run");
+                var file = url[0];
+                console.log("hey")
+                var reader = new FileReader();
+                reader.onload = ((e) => {
+                    // done = e.target.result;
+                    var div = document.querySelector("#result");
+                    var img = document.createElement("img")
+                    img.src = e.target.result;
+                    div.appendChild(img)
+                });
+                reader.readAsDataURL(file)
+            };
+
+
+            if (url.length != 1) {
+                var div = document.querySelector("#result");
+                for (var i = 0; i < url.length; i++) {
+                    var file = url[i]
+                    var reader = new FileReader();
+                    reader.onload = ((e) => {
+                        done = [e.target.result];
+                        var img = document.createElement("img");
+                        div.style.display = "flex";
+                        div.style.flexWrap = "wrap";
+                        img.src = e.target.result;
+                        div.appendChild(img);
+                        img.style.width = "30%";
+                        img.style.height = "auto";
+                        img.style.marginLeft = "10%";
+                        img.style.marginTop = "5%";
+
+                        console.log(e);
+                    });
+                    reader.readAsDataURL(file);
+                }
+
+            }
+
+
+
+        })
+    </script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAuewESdtIolIUh1z0rsKOaLnEypun5dko",
+            authDomain: "mahanuke-construction-base.firebaseapp.com",
+            projectId: "mahanuke-construction-base",
+            storageBucket: "mahanuke-construction-base.appspot.com",
+            messagingSenderId: "778542588163",
+            appId: "1:778542588163:web:18b428993cc83f131ec936",
+            measurementId: "G-LZGSFFWHKF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+
+
+
+    <script src="/script/app.js"></script>
+</body>
+
+</html>
